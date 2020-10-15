@@ -30,7 +30,7 @@ spec:
         app: testapp-insecure
     spec:
       containers:
-      - image: docker pull cyberark/demo-app
+      - image: cyberark/demo-app
         imagePullPolicy: IfNotPresent
         name: testapp-insecure
         ports:
