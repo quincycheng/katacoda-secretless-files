@@ -41,7 +41,10 @@ spec:
         ports:
           - containerPort: 5432
         env:
-          POSTGRES_PASSWORD: 5b3e5f75cb3cdc725fe40318
-          POSTGRES_DB: test_app
-          POSTGRES_USER: test_app
+          - name: POSTGRES_PASSWORD
+            value: 5b3e5f75cb3cdc725fe40318
+          - name: POSTGRES_DB
+            value: test_app
+          - name: POSTGRES_USER
+            value: test_app
 
