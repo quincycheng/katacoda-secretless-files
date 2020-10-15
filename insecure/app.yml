@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: testapp-insecure
-  namespace: testapp-insecure
+  namespace: testapp
 spec:
   type: NodePort
   ports:
