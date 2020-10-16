@@ -18,14 +18,14 @@ spec:
       
 ---
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: testapp-db
   labels:
     app: testapp-db
   namespace: testapp
 spec:
-  serviceName: testapp-db
+  replicas: 1
   selector:
     matchLabels:
       app: testapp-db
@@ -47,4 +47,5 @@ spec:
             value: test_app
           - name: POSTGRES_USER
             value: test_app
+
 
