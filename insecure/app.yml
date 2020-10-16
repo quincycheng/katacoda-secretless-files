@@ -5,16 +5,12 @@ metadata:
   name: testapp-insecure
   namespace: testapp
 spec:
-  type: NodePort
-  ports:
-  - port: 80
-    targetPort: 80
-    protocol: TCP
-    name: http
+  type: LoadBalancer
   selector:
     app: testapp-insecure
-  externalIPs:
-    - 172.17.0.90
+  ports:
+  - port: 8080
+    targetPort: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -46,3 +42,5 @@ spec:
             value: test_app
           - name: DB_PASSWORD
             value: 5b3e5f75cb3cdc725fe40318
+          - name: DB_PLATFORM
+            value: postgres
