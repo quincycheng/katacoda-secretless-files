@@ -5,12 +5,12 @@ metadata:
   name: testapp-insecure
   namespace: testapp
 spec:
-  type: LoadBalancer
-  selector:
-    app: testapp-insecure
+  type: NodePort
   ports:
   - port: 8080
     targetPort: 8080
+  selector:
+    app: testapp-insecure
 ---
 apiVersion: apps/v1
 kind: Deployment
