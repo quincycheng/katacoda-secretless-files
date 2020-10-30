@@ -1,0 +1,19 @@
+- !policy
+  id: app/testapp
+  owner: !group kube_admin
+  annotations:
+    description: This policy contains the creds to access the DB creds in conjur
+
+  body:
+    - &variables
+      - !variable db-username
+      - !variable db-password
+      - !variable db-url
+      - !variable db-platform
+
+    - !layer testapp-layer
+
+    - !permit
+      resource: *variables
+      privileges: [ read, execute ]
+      roles: !layer testapp-layer
