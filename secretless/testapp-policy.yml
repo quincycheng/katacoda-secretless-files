@@ -6,14 +6,14 @@
 
   body:
     - &variables
-      - !variable db-username
-      - !variable db-password
-      - !variable db-url
-      - !variable db-platform
+      - !variable secret/db-username
+      - !variable secret/db-password
+      - !variable secret/db-url
+      - !variable secret/db-platform
 
-    - !layer testapp-layer
+    - !layer layer
 
     - !permit
       resource: *variables
       privileges: [ read, execute ]
-      roles: !layer testapp-layer
+      roles: !layer layer
