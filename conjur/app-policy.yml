@@ -8,7 +8,7 @@
         id: service-account-based-app
         annotations:
           authn-k8s/namespace: testapp
-          authn-k8s/service-account: testapp-sa
+          authn-k8s/service-account: testapp-secure-sa
           authn-k8s/authentication-container-name: secretless
           kubernetes: "true"
     - !grant
