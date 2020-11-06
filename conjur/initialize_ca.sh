@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 AUTHENTICATOR_ID='dev'
 CONJUR_ACCOUNT='default'
 
