@@ -6,10 +6,10 @@
 
   body:
     - &variables
-      - !variable secret/db-username
-      - !variable secret/db-password
-      - !variable secret/db-url
-      - !variable secret/db-platform
+      - !variable secret/host
+      - !variable secret/port
+      - !variable secret/username
+      - !variable secret/password
 
     - !layer layer
 
