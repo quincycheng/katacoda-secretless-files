@@ -10,7 +10,9 @@ APP_SECRETS_POLICY_BRANCH="app/testapp/secret"
 APP_SECRETS_READER_LAYER="app/testapp/layer"
 
 CONJUR_ACCOUNT="default"
-CONJUR_APPLIANCE_URL="https://conjur.demo.com"
+#CONJUR_APPLIANCE_URL="https://conjur.demo.com"
+CONJUR_APPLIANCE_URL="https://conjur-cluster-conjur-oss.conjur-server.svc.cluster.local"
+
 CONJUR_ADMIN_AUTHN_LOGIN="admin"
 CONJUR_ADMIN_API_KEY="MySecretP@ss1"
 
